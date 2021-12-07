@@ -13,6 +13,7 @@ export default function App() {
 
   const handlePrompt = (e) => {
     const updatedGroup = prompt("Group name:");
+    console.log(updatedGroup, uniqueGroups)
     if (uniqueGroups.includes(updatedGroup)) {
       setGroup(updatedGroup);
     }
@@ -100,7 +101,6 @@ export default function App() {
             filtered[
               filtered.findIndex((r) => r.label === incoming.label)
             ].incomings.map((incomingIncoming) => {
-              console.log(rel.label, incomingIncoming.label);
               return (
                 <Circle
                   x={START * 2 + STEP * (i - .25)}
