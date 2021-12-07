@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { Stage, Layer, Text, Arrow, Circle } from "react-konva";
+import { Stage, Layer, Text, Circle } from "react-konva";
 import useWheelZoom from "./useWheelZoom";
 import useFilterGroup from "./useFIlterGroup";
 
@@ -14,7 +13,9 @@ export default function App() {
 
   const handlePrompt = (e) => {
     const updatedGroup = prompt("Group name:");
-    setGroup(updatedGroup);
+    if (uniqueGroups.includes(updatedGroup)) {
+      setGroup(updatedGroup);
+    }
   };
 
   return (
