@@ -80,7 +80,7 @@ export default function App() {
 
         {/* Child Position Values */}
         {filtered.flatMap((rel, i) =>
-          rel.incomings.map((incoming) => (
+          rel?.incomings?.map((incoming) => (
             <Circle
               x={START * 2 + STEP * (i - 0.25)}
               y={
@@ -97,10 +97,10 @@ export default function App() {
 
         {/* Grandchild Position Values */}
         {filtered.flatMap((rel, i) =>
-          rel.incomings.map((incoming) =>
+          rel?.incomings?.map((incoming) =>
             filtered[
               filtered.findIndex((r) => r.label === incoming.label)
-            ].incomings.map((incomingIncoming) => {
+            ]?.incomings?.map((incomingIncoming) => {
               return (
                 <Circle
                   x={START * 2 + STEP * (i - .25)}
