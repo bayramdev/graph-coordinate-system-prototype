@@ -1,0 +1,59 @@
+{
+  "relations": [
+    {
+      "label": "A",
+      "group": "G1",
+      "incomings": [{ "label": "H", "group": "G1", "degree": 1 }]
+    },
+    {
+      "label": "B",
+      "group": "G1",
+      "incomings": [{ "label": "G", "group": "G1", "degree": 2 }]
+    },
+    {
+      "label": "C",
+      "group": "G1",
+      "incomings": [{ "label": "F", "group": "G1", "degree": 2 }]
+    },
+    {
+      "label": "D",
+      "group": "G1",
+      "incomings": [{ "label": "E", "group": "G1", "degree": 1 }]
+    },
+    {
+      "label": "E",
+      "group": "G1",
+      "incomings": [{ "label": "D", "group": "G1", "degree": 3 }]
+    },
+    {
+      "label": "F",
+      "group": "G1",
+      "incomings": [{ "label": "I", "group": "G1", "degree": 1 }]
+    },
+    {
+      "label": "G",
+      "group": "G1",
+      "incomings": [{ "label": "C", "group": "G1", "degree": 2 }]
+    },
+    {
+      "label": "H",
+      "group": "G1",
+      "incomings": [{ "label": "B", "group": "G1", "degree": 3 }]
+    },
+    {
+      "label": "I",
+      "group": "G1",
+      "incomings": [{ "label": "A", "group": "G1", "degree": 2 }]
+    },
+    {
+      "label": "Z",
+      "group": "G2",
+      "incomings": [{ "label": "X", "group": "G2", "degree": 1 }]
+    },
+    {
+      "label": "X",
+      "group": "G2",
+      "incomings": [{ "label": "Z", "group": "G2", "degree": 1 }]
+    }
+  ]
+}
