@@ -1,4 +1,4 @@
-import { Stage, Layer, Text, Circle } from "react-konva";
+import { Stage, Layer, Text, Circle, Arrow } from "react-konva";
 import useWheelZoom from "./useWheelZoom";
 import useFilterGroup from "./useFIlterGroup";
 
@@ -41,6 +41,34 @@ export default function App() {
           onClick={handlePrompt}
         />
 
+        {/* Y axis */}
+        <Arrow
+          x={0}
+          y={STEP * filtered.length}
+          stroke={"black"}
+          fill={"black"}
+          width={10}
+          points={[
+            -3 * STEP, 0,
+            3 * START + STEP * filtered.length, 0
+          ]}
+          pointerAtBeginning={true}
+        />
+
+        {/* X axis */}
+        <Arrow
+          x={START * 2 - STEP}
+          y={0}
+          stroke={"black"}
+          fill={"black"}
+          width={10}
+          points={[
+            0, - 3 * STEP, 
+            0, 3 * START + STEP * filtered.length
+          ]}
+          pointerAtBeginning={true}
+        />
+
         {/* Horizontal Axis Values */}
         {filtered.map((rel, i) => (
           <Text
@@ -58,7 +86,7 @@ export default function App() {
         {filtered.map((rel, i) => (
           <Text
             x={START * 2 + STEP * i}
-            y={START + (filtered.length - 1) * STEP}
+            y={START + (filtered.length - 2) * STEP}
             text={rel.label}
             fontSize={14}
             fontFamily={"sans"}
